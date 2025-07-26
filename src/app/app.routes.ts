@@ -4,6 +4,7 @@ import { Admin } from './admin/admin';
 import { Ifelse } from './controlFlow/ifelse/ifelse';
 import { For } from './controlFlow/for/for';
 import { Switch } from './controlFlow/switch/switch';
+import { Pipe } from './pipe/pipe';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'controlFlow/switch',
     component: Switch,
+  },
+  {
+    path: 'pipes',
+    component: Pipe,
   },
 ];

@@ -1,0 +1,28 @@
+<p>pipe works!</p>
+
+<div class="container">
+  <div class="">
+    <h2>
+      Original: {{ firstName }} {{ middleName }}
+      {{ lastName }}
+    </h2>
+  </div>
+  <div class="">
+    <h2>
+      {{ firstName | uppercase }} {{ middleName | uppercase }}
+      {{ lastName | uppercase }}
+    </h2>
+  </div>
+  <div class="">
+    <h2>
+      {{ firstName | lowercase }} {{ middleName | lowercase }}
+      {{ lastName | lowercase }}
+    </h2>
+  </div>
+  <div class="">
+    <h2>
+      {{ firstName | titlecase }} {{ middleName | titlecase }}
+      {{ lastName | titlecase }}
+    </h2>
+  </div>
+</div>

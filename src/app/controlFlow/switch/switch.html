@@ -1,1 +1,27 @@
-<p>switch works!</p>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Day of the Week</span>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="1"
+    aria-label="Monday"
+    aria-describedby="basic-addon1"
+    [(ngModel)]="inputVal"
+  />
+</div>
+
+<div class="container">
+  @switch (inputVal) { @case ('1') { <span>Sunday</span> } @case ('2') {
+  <span>Monday</span>
+  } @case ('3') {
+  <span>Tuesday</span>
+  } @case ('4') {
+  <span>Wednesday</span>
+  } @case ('5') {
+  <span>Thursday</span>
+  } @case ('6') {
+  <span>Friday</span>
+  } @case ('7') {
+  <span>Saturday</span>
+  } @default { <span>Enter Day Number</span> } }
+</div>

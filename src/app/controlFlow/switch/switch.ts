@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-switch',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './switch.html',
-  styleUrl: './switch.css'
+  styleUrl: './switch.css',
 })
 export class Switch {
-
+  inputVal: string = '';
 }
