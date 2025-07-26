@@ -1,0 +1,85 @@
+<div class="container mt-4">
+  <!-- Header -->
+  <div class="bg-secondary text-white p-3 rounded">
+    <h4>Control Flow Statement</h4>
+    <p>&#64;if, &#64;else, &#64;else if</p>
+  </div>
+
+  <!-- Div Blocks -->
+  <div class="row text-center mt-3">
+    <div class="col">
+      @if(divOneVisible){
+      <div class="p-4 bg-primary text-white rounded">
+        <h2>Using &#64;if</h2>
+      </div>
+      }
+    </div>
+    <div class="col">
+      @if(toggleVisible){
+      <div class="p-4 bg-success text-white rounded"><h2>Success</h2></div>
+      }@else{
+      <div class="p-4 bg-danger text-white rounded"><h2>Danger</h2></div>
+      }
+    </div>
+    <div class="col">
+      @if(numA == numB) {
+      <div class="p-4 bg-success text-white rounded">
+        <h2>Equal!</h2>
+      </div>
+      }@else{
+      <div class="p-4 bg-danger text-white rounded">
+        <h2>Not Equal!</h2>
+      </div>
+      }
+    </div>
+    <div class="col">
+      <div class="p-4 bg-danger text-white rounded">
+        @if(option == 'Active'){
+        <h2>Student Is Active</h2>
+        }@else if(option == 'De-Active'){
+        <h2>Student Is De-Active</h2>
+        }@else if(option == 'Pending'){
+        <h2>Status Is Pending</h2>
+        }@else{
+        <h2>Select!</h2>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="row mt-4 text-center d-flex gap-2">
+    <div class="col">
+      <button class="btn btn-primary" (click)="show()">Show</button>
+      <button class="btn btn-danger" (click)="hide()">Hide</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-success" (click)="toggle()">Toggle</button>
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        [(ngModel)]="numA"
+        class="form-control w-auto"
+        placeholder="Num-1"
+      />
+      <input
+        type="text"
+        [(ngModel)]="numB"
+        class="form-control w-auto"
+        placeholder="Num-2"
+      />
+    </div>
+    <div class="col">
+      <select class="form-select w-auto" [(ngModel)]="option">
+        <option>Select Status</option>
+        <option>Active</option>
+        <option>De-Active</option>
+        <option>Pending</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Inputs -->
+  <div class="mt-3 d-flex gap-2"></div>
+</div>
