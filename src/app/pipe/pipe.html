@@ -1,28 +1,111 @@
-<p>pipe works!</p>
+<p>Pipes Example</p>
 
-<div class="container">
-  <div class="">
-    <h2>
-      Original: {{ firstName }} {{ middleName }}
-      {{ lastName }}
-    </h2>
-  </div>
-  <div class="">
-    <h2>
-      {{ firstName | uppercase }} {{ middleName | uppercase }}
-      {{ lastName | uppercase }}
-    </h2>
-  </div>
-  <div class="">
-    <h2>
-      {{ firstName | lowercase }} {{ middleName | lowercase }}
-      {{ lastName | lowercase }}
-    </h2>
-  </div>
-  <div class="">
-    <h2>
-      {{ firstName | titlecase }} {{ middleName | titlecase }}
-      {{ lastName | titlecase }}
-    </h2>
+<div class="container mt-3">
+  <div class="row g-3">
+    <!-- Original Name -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Original:</h5>
+        <p>{{ firstName }} {{ middleName }} {{ lastName }}</p>
+      </div>
+    </div>
+
+    <!-- Uppercase -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Uppercase:</h5>
+        <p>
+          {{ firstName | uppercase }} {{ middleName | uppercase }}
+          {{ lastName | uppercase }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Lowercase -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Lowercase:</h5>
+        <p>
+          {{ firstName | lowercase }} {{ middleName | lowercase }}
+          {{ lastName | lowercase }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Titlecase -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Titlecase:</h5>
+        <p>
+          {{ firstName | titlecase }} {{ middleName | titlecase }}
+          {{ lastName | titlecase }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Date Pipe -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Date Pipe:</h5>
+        <p>Original: {{ date2 }}</p>
+        <p>Default: {{ date2 | date }}</p>
+        <p>Custom: {{ date2 | date : "dd-MM-yyyy" }}</p>
+      </div>
+    </div>
+
+    <!-- Currency Pipe -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Currency Pipe:</h5>
+        <p>{{ 12345.678 | currency : "INR" : "symbol" : "1.2-2" }}</p>
+      </div>
+    </div>
+
+    <!-- Percent Pipe -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Percent Pipe:</h5>
+        <p>{{ 0.857 | percent : "1.1-2" }}</p>
+      </div>
+    </div>
+
+    <!-- Number Pipe -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Number Pipe:</h5>
+        <p>{{ 12345.6789 | number : "1.2-3" }}</p>
+      </div>
+    </div>
+
+    <!-- Slice Pipe -->
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Slice Pipe:</h5>
+        <p>{{ firstName | slice : 0 : 5 }}</p>
+      </div>
+    </div>
+
+    <!-- JSON Pipe -->
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h5>JSON Pipe:</h5>
+        <pre>{{ { name: firstName, age: 25, city: "Kolkata" } | json }}</pre>
+      </div>
+    </div>
+    <!-- Async Pipe with Observable -->
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h5>Async Pipe (Observable):</h5>
+        <p>{{ asyncData$ | async }}</p>
+      </div>
+    </div>
+
+    <!-- Async Pipe with Promise -->
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h5>Async Pipe (Promise):</h5>
+        <p>{{ asyncPromise | async }}</p>
+      </div>
+    </div>
   </div>
 </div>

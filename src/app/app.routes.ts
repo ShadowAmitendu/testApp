@@ -5,6 +5,7 @@ import { Ifelse } from './controlFlow/ifelse/ifelse';
 import { For } from './controlFlow/for/for';
 import { Switch } from './controlFlow/switch/switch';
 import { Pipe } from './pipe/pipe';
+import { Template } from './forms/template/template';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,10 @@ export const routes: Routes = [
   {
     path: 'pipes',
     component: Pipe,
+  },
+
+  {
+    path: 'forms/template',
+    component: Template,
   },
 ];
