@@ -1,0 +1,24 @@
+<div class="container p-4">
+  <h2>Department Management</h2>
+
+  <!-- Add Department -->
+  <div class="card p-3 mb-3">
+    <h4>Add New Department</h4>
+    <input
+      type="text"
+      [(ngModel)]="newDepartment.DepartmentName"
+      placeholder="Department Name"
+      class="form-control mb-2" />
+    <button (click)="createDepartment()" class="btn btn-success">Add Department</button>
+  </div>
+
+  <hr />
+
+  <!-- Departments List -->
+  <h3>Parent Departments</h3>
+  <ul class="list-group">
+    <li *ngFor="let dept of departments" class="list-group-item">
+      <strong>{{ dept.DepartmentName }}</strong>
+    </li>
+  </ul>
+</div>
