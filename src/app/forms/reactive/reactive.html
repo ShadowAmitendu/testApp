@@ -1,1 +1,56 @@
-<p>reactive works!</p>
+<form class="row g-3 border p-3 rounded" [formGroup]="studentForm">
+  <div class="col-md-4">
+    <label for="fName" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="fName" formControlName="firstName" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="lName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lName" formControlName="lastName" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="userName" class="form-label">Username</label>
+    <div class="input-group">
+      <span class="input-group-text">Username</span>
+      <input type="text" class="form-control" id="userName" formControlName="userName" required>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" id="city" formControlName="city" required>
+  </div>
+
+  <div class="col-md-3">
+    <label for="state" class="form-label">State</label>
+    <select class="form-select" id="state" formControlName="state" required>
+      <option selected disabled value="">Choose...</option>
+      <option>West Bengal</option>
+      <option>Bihar</option>
+      <option>Odisha</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label for="zipCode" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="zipCode" formControlName="pinCode" required>
+  </div>
+
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="acceptTerms" formControlName="isAccepted" required>
+      <label class="form-check-label" for="acceptTerms">
+        I accept the terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit" (click)="send()">Submit</button>
+  </div>
+</form>
+
+<div class="container">
+  {{ formValues | json }}
+</div>
