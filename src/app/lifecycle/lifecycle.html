@@ -1,0 +1,9 @@
+<div>
+  <p>Lifecycle Component Loaded</p>
+  <p>Input value: {{ data }}</p>
+</div>
+
+<button (click)="toggleComponent()">Toggle Component</button>
+<button (click)="changeData()">Change Input()</button>
+
+<app-lifecycle *ngIf="show" [data]="inputValue"></app-lifecycle>

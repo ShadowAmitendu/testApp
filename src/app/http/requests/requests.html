@@ -1,0 +1,11 @@
+<div class="container">
+  <button type="submit" class="btn btn-primary" (click)="getAllUsers()">
+    GET USER DATA
+  </button>
+
+  <ul>
+    <li *ngFor="let item of userList">{{ item.userName }}</li>
+  </ul>
+</div>
+
+<app-admin [message]="'This is a Alert using @input'"></app-admin>

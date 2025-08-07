@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-admin',
   imports: [],
   templateUrl: './admin.html',
-  styleUrl: './admin.css'
+  styleUrl: './admin.css',
 })
 export class Admin {
-
+  @Input() message: string = '';
 }

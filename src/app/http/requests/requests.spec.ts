@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpReq } from './http-req';
+import { Requests } from './requests';
 
-describe('HttpReq', () => {
-  let component: HttpReq;
-  let fixture: ComponentFixture<HttpReq>;
+describe('Requests', () => {
+  let component: Requests;
+  let fixture: ComponentFixture<Requests>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpReq]
+      imports: [Requests]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HttpReq);
+    fixture = TestBed.createComponent(Requests);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

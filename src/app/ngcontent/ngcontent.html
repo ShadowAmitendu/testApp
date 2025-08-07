@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h3>Fetch Users</h3>
+
+  <!-- Button to trigger API call -->
+  <button
+    class="btn btn-primary mb-3"
+    (click)="fetchUsers()"
+    [disabled]="isLoading"
+  >
+    Load Users
+  </button>
+
+  <!-- Loader -->
+  <ng-container *ngIf="isLoading">
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 150px"
+    >
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- User List -->
+  <ng-container *ngIf="!isLoading && hasLoaded">
+    <ul class="list-group">
+      <li *ngFor="let user of users" class="list-group-item">
+        {{ user.name }}
+      </li>
+    </ul>
+  </ng-container>
+</div>

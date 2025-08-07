@@ -6,8 +6,11 @@ import { For } from './controlFlow/for/for';
 import { Switch } from './controlFlow/switch/switch';
 import { Pipe } from './pipe/pipe';
 import { Template } from './forms/template/template';
-import {Reactive} from './forms/reactive/reactive';
-import {HttpReq} from './http-req/http-req';
+import { Reactive } from './forms/reactive/reactive';
+import { Requests } from './http/requests/requests';
+import { Lifecycle } from './lifecycle/lifecycle';
+import { Ngcontent } from './ngcontent/ngcontent';
+import { Viewchild } from './viewchild/viewchild';
 
 export const routes: Routes = [
   {
@@ -44,7 +47,19 @@ export const routes: Routes = [
     component: Reactive,
   },
   {
-    path: 'http-req',
-    component: HttpReq
-  }
+    path: 'http/requests',
+    component: Requests,
+  },
+  {
+    path: 'lifeCycle',
+    component: Lifecycle,
+  },
+  {
+    path: 'ngContent',
+    component: Ngcontent,
+  },
+  {
+    path: 'viewChild',
+    component: Viewchild,
+  },
 ];
