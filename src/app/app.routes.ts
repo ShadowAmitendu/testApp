@@ -11,6 +11,7 @@ import { Requests } from './http/requests/requests';
 import { Lifecycle } from './lifecycle/lifecycle';
 import { Ngcontent } from './ngcontent/ngcontent';
 import { Viewchild } from './viewchild/viewchild';
+import { Signal } from './signal/signal';
 
 export const routes: Routes = [
   {
@@ -62,4 +63,8 @@ export const routes: Routes = [
     path: 'viewChild',
     component: Viewchild,
   },
+  {
+    path: 'signal',
+    component: Signal,
+  }
 ];

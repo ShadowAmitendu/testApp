@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { DataOnCustomer } from '../class/data';
 
 @Component({
   selector: 'app-employees',
@@ -16,4 +17,7 @@ export class Employees {
   goToAdmin() {
     this.router.navigateByUrl("admin")
   }
+
+ data: DataOnCustomer = new DataOnCustomer() //init a class
+
 }
